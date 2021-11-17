@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="text()" style="text-align: center;" >
+<form action="">
+    <h1>Type anthing slowly</h1>
+    <lable><textarea id="txt" cols="30" rows="5"></textarea></lable>
+</form>
+</body>
+<script>
+    let array = [];
+    let str ='';
+    array[0]=' ';
+    array[1]='N';
+    array[2]='h';
+    array[3]='ậ';
+    array[4]='p';
+    array[5]=' ';
+    array[6]='L';
+    array[7]='ạ';
+    array[8]='i';
+    array[9]=' ';
+    array[10]='Đ';
+    array[11]='i';
+    array[12]=' ';
+    array[13]='B';
+    array[14]='ạ';
+    array[15]='n';
+    array[16]=' ';
+    array[17]='Ơ';
+    array[18]='i';
+    array[19]='!';
+    function text(){
+        let text = document.getElementById('txt').value;
+        let j = text.length ;
+        if ( j > 0 ){
+            for (let i = 1 ; i <= j; i++) {
+                str += array[i];
+                if ( i === 20 ){
+                    document.getElementById('txt').value='';
+                    str = '';
+                }
+            }
+        }
+        document.getElementById('txt').value= str ;
+        str ='';
+        setTimeout('text()',1);
+    }
+</script>
+</html>

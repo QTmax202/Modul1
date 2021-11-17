@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [10,5,4,19,25,6,100,45,9,11];
+    let max = arr[0];
+    let j = 0 ;
+    for (let i = 0; i < arr.length ; i++) {
+        if ( max < arr[i] ){
+            max = arr[i] ;
+            j = i ;
+        }
+    }
+    alert('gia tri lon nhat trong mang: '+max+' (vi tri '+j+' )')
+</script>
+</body>
+</html>

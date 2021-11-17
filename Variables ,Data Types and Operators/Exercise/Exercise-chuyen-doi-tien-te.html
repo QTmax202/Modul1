@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from>
+  <table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+      <tr>
+          <td><input type="text" id="number"></td>
+          <td>
+              <select id="from">
+                  <option value="vietnam">vietnam</option>
+                  <option value="usd">USD</option>
+              </select>
+          </td>
+          <td>
+              <select id="to">
+                  <option value="usd">USD</option>
+                  <option value="vietnam">vietnam</option>
+              </select>
+          </td>
+          <td><button type="button" onclick="convert()";>convert</button></td>
+      </tr>
+      <tr>
+          <td colspan="4" id="giatri"></td>
+      </tr>
+  </table>
+</from>
+<script>
+    function convert(){
+        let x= document.getElementById("number").value;
+        x = parseFloat(x);
+        let from =document.getElementById("from").value;
+        let to =document.getElementById("to").value;
+        let giatri;
+        if ( from == to ){
+            giatri = x ;
+            document.getElementById("giatri").innerText="result: "+giatri;
+        }
+        if ( from =="vietnam" && to == "usd"){
+            giatri = x/23000;
+            document.getElementById("giatri").innerText="result: "+giatri;
+        }
+        if ( from == "usd" && to == "vietnam"){
+            giatri = x*23000;
+            document.getElementById("giatri").innerText="result: "+giatri;
+        }
+        // else {
+        //     giatri = x*23000;
+        //         document.getElementById("giatri").innerText=giatri;
+        // }
+    }
+
+</script>
+</body>
+</html>

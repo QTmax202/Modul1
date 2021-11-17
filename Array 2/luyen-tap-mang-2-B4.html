@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str ='';
+    // let arr =[];
+    str = prompt('nhap chuoi: ');
+    let arr = str.split('');
+    console.log(arr);
+    let sum = 0 ;
+    for (let i = 0; i < arr.length ; i++) {
+        if( isNaN(arr[i] )){
+            sum += 1 ;
+        }
+    }
+    document.write('so tu trong chuoi: '+sum);
+</script>
+</body>
+</html>

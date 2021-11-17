@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt('So phan tu trong mang: ');
+    let arr = [];
+    for (let i = 0; i < number ; i++) {
+        let num = +prompt('nhap phan tu vao mang: ');
+        arr.push(num);
+    }
+    // let first = 0 ;
+    // let last = arr.length-1 ;
+    // while ( first < last){
+    //     let j= arr[first];
+    //     arr[first] = arr[last];
+    //     arr[last] = j ;
+    //     first++;
+    //     last--;
+    // }
+    // document.write(arr);
+    let arr1 = arr.reverse();
+    document.write(arr1)
+</script>
+</body>
+</html>

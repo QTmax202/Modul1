@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let number = +prompt('so phan tu trong mang: ');
+  for (let i = 1; i <= number ; i++) {
+      arr.push(prompt('nhap cac phan tu trong mang (phan tu '+i+' )'));
+  }
+  sum = 0 ;
+  for (let i = 0; i < arr.length ; i++) {
+      if ( isNaN(arr[i])){
+          sum += 1;
+      }
+  }
+  document.write('so ki tu trong mang: '+sum);
+</script>
+</body>
+</html>

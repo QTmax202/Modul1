@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let cd = parseInt(prompt('Nhap chieu dai cua hinh chu nhat: '));
+  let cr = parseInt(prompt('Nhap chieu rong cua hinh chu nhat: '));
+  for ( let j = 1 ; j <= cd ; j++) {
+      document.write('*');
+  }
+  document.write('<br>');
+  for ( let i = 2 ; i <= cr-1 ; i++ ){
+      for (let k = 1 ; k <= cd ; k++) {
+          if ( k === 1 || k === cd ){
+              document.write('*');
+          } else {
+              document.write('&nbsp&nbsp');
+          }
+      }
+      document.write('<br>');
+  }
+  for ( let j = 1 ; j <= cd ; j++) {
+      document.write('*');
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let money = parseFloat(prompt('so tien gui:'));
+  let month = parseFloat(prompt('so thang gui:'));
+  if ( month <= 6 ){
+      alert('so tien nhan duoc la:'+(money+(money*(2/100))));
+  } else if ( month <= 12 ){
+      alert('so tien nhan duoc la:'+(money+(money*(4/100))));
+  } else if ( month <= 24 ){
+      alert('so tien nhan duoc la:'+(money+(money*(8/100))));
+  } else {
+      alert('so tien nhan duoc la:'+(money+(money*(20/100))));
+  }
+</script>
+</body>
+</html>

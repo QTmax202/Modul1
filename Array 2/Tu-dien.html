@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="text">
+    <input type="button" value="Search" onclick="search()">
+    <div id="out"></div>
+</form>
+</body>
+<script>
+    function search() {
+        let flag = false;
+        let texts = [];
+        let i = 0;
+        let index = 0 ;
+        texts[0] = document.getElementById('text').value;
+        let english = ['hello', 'bye', 'apple', 'banana', 'simple'];
+        let vietnam = ['xin_chao', 'tam_biet', 'tao', 'chuoi', 'don_gian'];
+        for (; i < english.length; i++) {
+            if (texts[0].toString() === english[i].toString()) {
+                flag = true;
+                index = vietnam[i];
+                break;
+            }
+            if (texts[0].toString() === vietnam[i].toString()) {
+                flag = true;
+                index = english[i];
+                break;
+            }
+        }
+        if (flag) {
+            document.getElementById('out').innerText = index ;
+        } else {
+            document.getElementById('out').innerText = 'khong_tim_thay'
+        }
+    }
+
+</script>
+</html>

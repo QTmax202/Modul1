@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        let num = parseInt(prompt('nhap cac phan tu trong mang: '));
+        arr.push(num);
+    }
+    console.log(arr);
+    let v = parseInt(prompt('phan tu so nguyen V: '));
+    let ss = true ;
+    for ( let j = 0 ; j < arr.length ; j++ ) {
+        if ( v === arr[j] ){
+            ss = true ;
+            console.log('ok');
+            break;
+        } else {
+            ss = false ;
+        }
+    }
+    if (ss){
+        document.write("V is in the array");
+    } else {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
+</html>

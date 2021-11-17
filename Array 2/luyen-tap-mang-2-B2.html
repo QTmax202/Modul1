@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let number = +prompt('So phan tu trong mang: ');
+    for (let i = 0; i < number ; i++) {
+        let num =prompt('nhap cac phan tu trong mang (phan tu '+(i+1)+' )');
+        arr.push(num);
+    }
+    arr.reverse();
+    document.write(arr.toString());
+</script>
+</body>
+</html>

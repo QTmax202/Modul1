@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number1 = parseFloat(prompt('diem 1 tiet:'));
+  let number2 = parseFloat(prompt('diem giua ki:'));
+  let number3 = parseFloat(prompt('diem cuoi ki:'));
+  let tb = (number1*(10/100))+(number2*(30/100))+(number3*(60/100));
+  if ( tb <3 ){
+      alert('Hoc luc kem')
+  } else if ( tb<5 ){
+      alert('Hoc luc yeu')
+  } else if ( tb<6.5 ){
+      alert('Hoc luc trung binh')
+  } else if ( tb<8 ){
+      alert('Hoc luc kha')
+  } else {
+      alert('Hoc luc gioi')
+  }
+</script>
+</body>
+</html>

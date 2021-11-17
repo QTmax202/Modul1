@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseFloat(prompt('Nhap so tien ban dau (tr): '));
+    let month = parseInt(prompt('Nhap so thang cho vay: '));
+    let num = parseInt(prompt('Nhap lai suat hang thang (%): '));
+    // let FV = money * ((1+(num/100))**month);
+    // document.write('Tong so tien lai ngan hang: '+FV);
+    for ( let i = 1 ; i <= month ; i++ ){
+        money += (money*(num/100));
+    }
+    document.write('Tong so tien lai ngan hang: '+money);
+</script>
+</body>
+</html>
