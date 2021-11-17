@@ -17,7 +17,7 @@
         if ( v === arr[j] ){
             arr.splice(j,1);
             arr.push(0);
-            break;
+            j--;
         }
     }
     document.write(arr);
