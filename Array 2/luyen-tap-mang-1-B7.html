@@ -8,7 +8,7 @@
 <script>
     let arr = [];
     for (let i = 0; i < 10 ; i++) {
-        let num = parseInt(prompt('nhap cac phan tu trong mang: '));
+        let num = parseInt(prompt('nhap cac phan tu trong mang (phan tu '+(i+1)+' ): '));
         arr.push(num);
     }
     console.log(arr);
@@ -21,6 +21,7 @@
         }
     }
     document.write(arr);
+    console.log(arr);
 </script>
 </body>
 </html>
