@@ -2,32 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GoodFastCheap</title>
+    <title>Title</title>
+    <style>
+        form {
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+        }
+
+        div {
+            position: relative;
+            top: 100px;
+        }
+
+        input, label {
+            font-size: 36px;
+            padding: 5px;
+            margin: 10px 10px 5px 5px;
+        }
+    </style>
 </head>
 <body>
-<form action="">
-    <table>
-        <tr>
-            <th><input type="checkbox" id="go"></th>
-            <td>good</td>
-        </tr>
-        <tr>
-            <th><input type="checkbox" id="fa"></th>
-            <td>fast</td>
-        </tr>
-        <tr>
-            <th><input type="checkbox" id="ch"></th>
-            <td>cheap</td>
-        </tr>
-    </table>
-</form>
-</body>
-<script>
-    let good = document.getElementById('go');
-    let fast = document.getElementById('fa');
-    let cheap = document.getElementById('ch');
-    if ( good===fast ){
+<form>
+    <div><input type="checkbox" name="gfc" id="good" value="good" onclick="check1()"><label for="good">Good</label></div>
+    <div><input type="checkbox" name="gfc" id="fast" value="fast" onclick="check2()"><label for="fast">Fast</label></div>
+    <div><input type="checkbox" name="gfc" id="cheap" value="cheap" onclick="check3()"><label for="cheap">Cheap</label></div>
 
+</form>
+<script>
+    function check1() {
+        let fast = document.getElementById('fast').checked;
+        let cheap = document.getElementById('cheap').checked;
+        if (fast === cheap) {
+            document.getElementById('fast').checked = false
+        }
+    }function check2() {
+        let good = document.getElementById('good').checked;
+        let cheap = document.getElementById('cheap').checked;
+        if (good === cheap) {
+            document.getElementById('cheap').checked = false
+        }
+    }function check3() {
+        let good = document.getElementById('good').checked;
+        let fast = document.getElementById('fast').checked;
+        if (good === fast) {
+            document.getElementById('good').checked = false
+        }
     }
+
 </script>
+</body>
 </html>
