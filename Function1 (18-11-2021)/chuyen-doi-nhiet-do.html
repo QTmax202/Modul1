@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Fahrenheit</label>;
+        <input type="number" placeholder="Fahrenheit"
+               oninput="nhietdo(this.value)"
+               onchange="nhietdo(this.value)"
+        >
+    </p>
+    <p>Do C: <span id="outputC"></span></p>
+</form>
+<script>
+    function nhietdo(valNum) {
+        valNum = parseFloat(valNum);
+        chuyendoi = (valNum - 32) / 1.8
+        document.getElementById("outputC").innerHTML = chuyendoi.toFixed(2)
+    }
+</script>
+</body>
+</html>

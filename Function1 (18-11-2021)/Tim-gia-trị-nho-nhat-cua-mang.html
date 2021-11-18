@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let number = parseInt(prompt('Nhap so phan tu trong mang: '));
+    for (let i = 0; i < number; i++) {
+        let num = parseFloat(prompt('Nhap phan tu ' + (i + 1) + ' : '));
+        arr.push(num);
+    }
+
+    function minArr(arr1) {
+        if (arr1.length === 0) {
+            return -1;
+        }
+        let min1 = arr1[0];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] < min1) {
+                min1 = arr1[i];
+            }
+        }
+        return min1;
+    }
+    let min = minArr(arr);
+    document.write('<h4>'+'arr = ['+arr+']'+'<br>'+'gia tri nho nhat cua mang: '+min+'</h4>');
+</script>
+</body>
+</html>
