@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Nhap so can kiem tra: '));
+
+    function ktSNT(num) {
+        let kt = true;
+        let output = '';
+        if (num < 2) {
+            kt = false;
+        } else {
+            for (let i = 2; i < num - 1; i++) {
+                if (num % i === 0) {
+                    kt = false;
+                    break;
+                }
+            }
+        }
+        if (kt) {
+            output = 'La so nguyen to';
+        } else {
+            output = ' ko la so nguyen to';
+        }
+        return output;
+    }
+
+    document.write('<h4>' + number + ' ' + ktSNT(number) + '</h4>')
+</script>
+</body>
+</html>

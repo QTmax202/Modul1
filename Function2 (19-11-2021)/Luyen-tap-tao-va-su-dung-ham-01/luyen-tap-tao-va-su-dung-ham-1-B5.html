@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let array2 = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+
+    function isStar(arr1, arr2) {
+        let star = prompt('nhập vào tên của ngôi sao: ');
+        let check = false;
+        for (let i = 0; i < arr1.length; i++) {
+            if (star.toString() === arr1[i].toString()) {
+                check = true;
+                document.write(arr2[i].toString());
+                break;
+            }
+        }
+        if(!check) {
+            document.write('không tìm thấy ngôi sao nào');
+        }
+    }
+    isStar(array1,array2);
+</script>
+</html>

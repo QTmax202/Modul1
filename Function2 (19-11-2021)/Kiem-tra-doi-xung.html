@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str = prompt('Nhap chuoi: ');
+  let arr = str.split("");
+  // let check = true
+  // for (let i = 0; i < arr.length / 2; i++) {
+  //     if (arr[i] !== arr[arr.length - 1 - i]) {
+  //         check = false
+  //         break
+  //     }
+  // }
+  // if (check) {
+  //     alert("Đúng")
+  // } else {
+  //     alert("Sai")
+  // }
+  let count = 0
+
+  function check(arr, count) {
+      if (arr[count] !== arr[arr.length - 1 - count]) {
+          return "Không là chuỗi"
+      } else if (count <= arr.length / 2) {
+          return check(arr, ++count)
+      }
+      return "Là chuỗi"
+  }
+
+  alert(check(arr, count))
+</script>
+</body>
+</html>
