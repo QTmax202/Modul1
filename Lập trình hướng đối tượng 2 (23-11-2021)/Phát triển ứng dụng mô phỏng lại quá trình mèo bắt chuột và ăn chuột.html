@@ -6,91 +6,95 @@
 </head>
 <body>
 <script>
-    class Rat{
+    class Rat {
         name
         mass
         speed
         status
-        constructor(name,mass,speed,status) {
+
+        constructor(name, mass, speed, status) {
             this.name = name;
-            this.mass = mass ;
+            this.mass = mass;
             this.speed = speed;
             this.status = status;
             this.sound = "chít chít chít chít...";
         }
 
-        getSound(){
+        getSound() {
             return this.status
         }
 
-        getSpeed(){
+        getSpeed() {
             return this.speed;
         }
 
-        getMass(){
+        getMass() {
             return this.mass;
         }
 
-        getStatus(){
+        getStatus() {
             return this.status;
         }
 
-        setSpeed(speed){
+        setSpeed(speed) {
             this.speed = speed;
         }
 
-        setMass(mass){
+        setMass(mass) {
             this.mass = mass;
         }
 
-        arrested(){
-            this.status = false ;
+        arrested() {
+            this.status = false;
         }
 
     }
-    class Cat{
+
+    class Cat {
         name
         mass
         speed
         sound
-        constructor(name,mass,speed,mouse) {
+
+        constructor(name, mass, speed, mouse) {
             this.mass = mass;
-            this.name = name ;
+            this.name = name;
             this.speed = speed;
             this.mouse = mouse;
             this.sound = "Meow meow..Meow meow....."
         }
 
-        getSound(){
+        getSound() {
             return this.sound
         }
 
-        setSpeed(speed){
+        setSpeed(speed) {
             this.speed = speed;
         }
 
-        setMass(mass){
+        setMass(mass) {
             this.mass = mass;
         }
 
-        goHunting(){
-            if (this.speed >= this.mouse.getSpeed()){
-                if (this.mouse.getStatus()){
+        goHunting() {
+            if (this.mouse.getStatus()) {
+                if (this.speed >= this.mouse.getSpeed()) {
                     this.mouse.arrested();
                     this.mass += this.mouse.getMass();
                     console.log("eat");
-                } else{
-                    console.log("no eat");
+                } else {
+                    console.log("don't catch up");
                 }
-            }else {
-                console.log("don't catch up");
+            } else {
+                console.log("no eat");
             }
         }
     }
-    let mouse1 = new Rat("mouse1",2,12,true);
-    let mouse2 = new Rat("mouse2",2,12,false);
-    let mouse3 = new Rat("mouse3",2,20,true);
-    let cat = new Cat("cat",7,17,mouse1);
+
+    let mouse1 = new Rat("mouse1", 2, 12, true);
+    let mouse2 = new Rat("mouse2", 2, 12, false);
+    let mouse3 = new Rat("mouse3", 2, 20, true);
+    let cat = new Cat("cat", 7, 17,mouse1);
 </script>
 </body>
 </html>
