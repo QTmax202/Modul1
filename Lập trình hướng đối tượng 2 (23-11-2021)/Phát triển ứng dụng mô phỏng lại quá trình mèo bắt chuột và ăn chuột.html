@@ -56,11 +56,11 @@
         speed
         sound
 
-        constructor(name, mass, speed, mouse) {
+        constructor(name, mass, speed) {
             this.mass = mass;
             this.name = name;
             this.speed = speed;
-            this.mouse = mouse;
+            // this.mouse = mouse;
             this.sound = "Meow meow..Meow meow....."
         }
 
@@ -76,11 +76,11 @@
             this.mass = mass;
         }
 
-        goHunting() {
-            if (this.mouse.getStatus()) {
-                if (this.speed >= this.mouse.getSpeed()) {
-                    this.mouse.arrested();
-                    this.mass += this.mouse.getMass();
+        goHunting(mouse) {
+            if (mouse.getStatus()) {
+                if (this.speed >= mouse.getSpeed()) {
+                    mouse.arrested();
+                    this.mass += mouse.getMass();
                     console.log("eat");
                 } else {
                     console.log("don't catch up");
@@ -94,7 +94,7 @@
     let mouse1 = new Rat("mouse1", 2, 12, true);
     let mouse2 = new Rat("mouse2", 2, 12, false);
     let mouse3 = new Rat("mouse3", 2, 20, true);
-    let cat = new Cat("cat", 7, 17,mouse1);
+    let cat = new Cat("cat", 7, 17);
 </script>
 </body>
 </html>
