@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table {
+            width: 600px;
+        }
+
+        #name {
+            width: 50%;
+        }
+
+        input {
+            border-radius: 5px;
+            height: 20px;
+        }
+
+        button {
+            width: 70px;
+            border-radius: 5px;
+            height: 30px;
+            background-color: green;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f6f3ec;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        table, tr, td {
+            border-collapse: collapse;
+        }
+
+        #title {
+            background-color: #f6f3ec;
+            padding: 20px;
+            width: 52%;
+            border-radius: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="QLSP.css">
+</head>
+<body onload="displayProduct()">
+<h1 onclick="displayProduct()">Add New Product</h1>
+<div id="title">
+    <label><input type="text" placeholder="New Product" id="add"></label>
+    <button onclick="add()">Add</button>
+    <label><input type="text" placeholder="Edit Product" id="edit"></label>
+    <button onclick="editProduct()">Edit</button>
+</div>
+<h1>Display All Product</h1>
+<div id="product"></div>
+<script>
+    let listProduct = ["Sony", "Nokia", "Iphone", "Samsung"]
+    let editIndex
+
+    function displayProduct() {
+        let data = "<table>"
+        data += "<tr><td colspan='3'><b>Product Name</b></td><td style='color: red'>" + listProduct.length + " products</td></tr>"
+        for (let i = 0; i < listProduct.length; i++) {
+            data += "<tr>"
+            data += "<td id='name'>" + listProduct[i] + "</td>"
+            data += "<td><button onclick='edit(" + i + ")'>Edit</button></td>"
+            data += "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>"
+            data += "<td><button onclick='viewProduct(" + i + ")'>View</button></td>"
+            data += "</tr>"
+        }
+        data += "</table>"
+        document.getElementById("product").innerHTML = data
+    }
+
+    function add() {
+        let product = document.getElementById("add").value
+        listProduct.push(product)
+        document.getElementById("add").value = ""
+        displayProduct()
+    }
+
+    function edit(index) {
+        // let product = prompt("Nhập vào giá trị bạn muốn thay đổi: ", listProduct[index])
+        // listProduct[index] = product
+        document.getElementById("edit").value = listProduct[index]
+        editIndex = index
+        displayProduct()
+    }
+
+    function editProduct() {
+        let product = document.getElementById("edit").value
+        listProduct[editIndex] = product
+        displayProduct()
+        document.getElementById("edit").innerHTML = "";
+    }
+
+    function deleteProduct(index) {
+        listProduct.splice(index, 1)
+        displayProduct()
+    }
+
+    function viewProduct(index) {
+        document.getElementById("product").innerHTML = "Sản phẩm thứ " + (index + 1) + " là: " + listProduct[index]
+    }
+</script>
+</body>
+</html>
